@@ -40,13 +40,13 @@ chmod +x scripts/create-icon.sh
 npm run create-component <mode> <component-name> [path]
 ```
 
-### <mode>:
+### `<mode>` :
 
 c - Create only the component file.
 cc - Create both the component and container files.
 <component-name>: The name of the component in kebab-case (e.g., my-component).
 
-### <component-name>:
+### `<component name>` :
 
 <component-name>: The name of the component in kebab-case (e.g., my-component).
 
