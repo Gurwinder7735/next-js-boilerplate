@@ -1,8 +1,14 @@
+"use client";
 import React from "react";
 import { ICustomButton } from "./types";
+import { signOut } from "next-auth/react";
 
 const CustomButtonComponent = ({}: ICustomButton) => {
-  return <div>CustomButton</div>;
+  return (
+    <>
+      <button onClick={() => signOut()}>Logout</button>
+    </>
+  );
 };
 
 export default CustomButtonComponent;

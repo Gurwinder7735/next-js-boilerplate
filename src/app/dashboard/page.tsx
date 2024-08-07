@@ -1,12 +1,20 @@
 import { getServerSession } from "next-auth";
-import { signIn, useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 import React from "react";
 import { authOptions } from "../api/auth/[...nextauth]/route";
+import CustomButton from "@/components/atoms/custom-button";
 
 const DashboardPage = async () => {
   const session = await getServerSession(authOptions);
 
-  return <div>DashboardPage</div>;
+  console.log(session, "session>>");
+
+  return (
+    <div>
+      DashboardPage
+      <CustomButton />
+    </div>
+  );
 };
 
 export default DashboardPage;

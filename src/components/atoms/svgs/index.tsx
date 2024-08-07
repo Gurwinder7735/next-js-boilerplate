@@ -1,5 +1,5 @@
 import IcUser from "./ic-user";
 
-export const Icon = {
+export const Svgs = {
   IcUser,
 };

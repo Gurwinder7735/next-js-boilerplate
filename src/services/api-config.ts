@@ -1,6 +1,7 @@
 // import { setCookie } from "cookies-next";
 
 import axios, { AxiosResponse, AxiosRequestConfig } from "axios";
+import { getSession } from "next-auth/react";
 
 const maxRetries = 4;
 let retries = 0;
@@ -15,11 +16,14 @@ const axiosApi = axios.create({
 axiosApi.defaults.headers.common["Authorization"] = token;
 
 // Add a request interceptor to dynamically change the base URL
+// Add a request interceptor to include the custom token
 axiosApi.interceptors.request.use(
-  (config) => {
-    if (config.url?.startsWith("/api/chat")) {
-      // Change the base URL for this request
-      config.baseURL = process.env.NEXT_PUBLIC_CHAT_API_BASE_URL;
+  async (config) => {
+    const session: any = await getSession();
+    console.log(session.user.customToken, "ddd");
+
+    if (session && session.user.customToken) {
+      config.headers.Authorization = `Bearer ${session.user.customToken}`;
     }
     return config;
   },
