@@ -2,6 +2,7 @@
 
 import GoogleLogin from "@/components/atoms/google-login";
 import { useSession } from "next-auth/react";
+import Image from "next/image";
 import { permanentRedirect } from "next/navigation";
 import React from "react";
 
@@ -18,17 +19,14 @@ const LoginPage = () => {
   return (
     <div className="h-screen grid grid-cols-1 lg:grid-cols-2 py-[119px] px-12 md:px-24 lg:px-[144px] gap-x-[190px]">
       <div className="hidden lg:block col-span-1 overflow-hidden">
-        {/* <div className=""> */}
-        <img
+        <Image
           className="h-full w-full object-contain"
           src="/assets/images/cover.png"
-          // width={487}
-          // height={445}
-          // objectFit="cover"
+          width={487}
+          height={445}
           alt="Promotion"
           loading="eager"
         />
-        {/* </div> */}
       </div>
       <div className="col-span-1 flex items-center">
         <div className="text-center flex flex-col gap-y-10 items-center w-full">

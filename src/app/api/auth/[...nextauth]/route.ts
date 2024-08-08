@@ -1,3 +1,4 @@
+// @ts-ignore
 import { socialLogin } from "@/services/auth";
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
