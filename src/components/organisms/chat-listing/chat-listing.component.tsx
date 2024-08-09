@@ -20,8 +20,8 @@ const ChatListingComponent = ({}: IChatListing) => {
           <AiFillPlusCircle className="text-primary-400 text-[40px]" />
         </button>
       </div>
-      <div>
-        {/* <ChatSearch /> */}
+      <div className="px-6">
+        <ChatSearch />
         <div>
           <ChatItem />
           <ChatItem />

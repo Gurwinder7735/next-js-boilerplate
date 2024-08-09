@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ChatItemComponent = ({}: IChatItem) => {
   return (
-    <div className="flex gap-x-4 w-full p-3">
+    <div className="flex gap-x-4 w-full p-3 transition-all duration-200 hover:bg-primary-300 cursor-pointer rounded-md">
       <Image
         src={
           "https://lh3.googleusercontent.com/a/ACg8ocJ_TOyMmm-DXglzGjOPDsRHQ7B0jhCMG_BefWnszlNRiQznzQ=s96-c"

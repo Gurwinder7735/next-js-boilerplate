@@ -15,10 +15,11 @@ const DashboardPage = async () => {
     <div className="h-screen flex">
       <MainSidebar />
       <div className="bg-red-400f w-[calc(100vw-88px)] h-full flex">
-        <div className="bg-yellow-300f w-[317px] h-full  border-r">
+        <div className="w-[317px] h-full  border-r">
           <ChatListing />
         </div>
-        <div>
+        {/* <div className="bg-red-500 w-[calc(100vw-404px)] h-full"> */}
+        <div className="bg-red-5000 w-[calc(100%-317px)] h-full flex flex-col justify-between">
           <ChatMainArea />
         </div>
       </div>
