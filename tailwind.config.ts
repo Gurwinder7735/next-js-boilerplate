@@ -36,7 +36,12 @@ const config = {
         primary: {
           100: "#96a0ad",
           200: "#BDC4CD",
+          300: "#615EF00F",
+          400: "#615EF0",
         },
+      },
+      boxShadow: {
+        custom: "0px 0px 24px 0px rgba(0, 0, 0, 0.08)",
       },
     },
   },
