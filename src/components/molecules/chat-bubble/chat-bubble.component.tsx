@@ -21,7 +21,11 @@ const ChatBubbleComponent = ({ reverse }: IChatBubble) => {
         />
       </div>
 
-      <span className="bg-primary-700 rounded-xl px-4 py-2">
+      <span
+        className={`${
+          reverse ? "bg-primary-400 text-white" : "bg-primary-700"
+        } rounded-xl px-4 py-2`}
+      >
         omg, this is amazing omg, this is amazing omg, this is amazing omg
       </span>
     </div>
