@@ -20,15 +20,16 @@ export const authOptions: any = {
           token: params?.account?.id_token,
         });
 
+        console.log(res, "res???????");
+
         params.account.customToken = res.token; // Use the correct field based on your API response
         params.account.refreshToken = res.refreshToken; // Use the correct field based on your API response
-
-        return true;
         console.log("RESPONSE FROM BACKEND COMES HERE.");
-      } catch (err) {
-        console.log(err);
-
         return true;
+      } catch (err) {
+        console.log(err, "error comes here");
+
+        return false;
       }
     },
     async jwt({ token, user, account }: any) {

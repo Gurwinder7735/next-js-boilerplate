@@ -20,9 +20,9 @@ axiosApi.defaults.headers.common["Authorization"] = token;
 axiosApi.interceptors.request.use(
   async (config) => {
     const session: any = await getSession();
-    console.log(session.user.customToken, "ddd");
+    console.log(session?.user?.customToken, "ddd");
 
-    if (session && session.user.customToken) {
+    if (session && session?.user?.customToken) {
       config.headers.Authorization = `Bearer ${session.user.customToken}`;
     }
     return config;
